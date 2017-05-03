@@ -1,0 +1,8 @@
+##Firstly  We go to directory where we need to get in 
+##Go to
+cd  /problems/884bb3c8fc9e0dbccc09787c1b016cd4
+
+##After that we will try to find the lucky number using bash loop
+for i in {0..4096}; do ./bashloop $i; done | grep flag
+
+##Yeap, That's all
