@@ -1,0 +1,10 @@
+    Soru- Question ?
+    A program at /problems/f49abea6827cafa20a035340d3812d09 has access to
+    a flag but refuses to share it. Can you convince it otherwise?
+    This is all about relative paths!! 
+cd ~
+mkdir problems
+mkdir /problems/f49abea6827cafa20a035340d3812d09
+/problems/f49abea6827cafa20a035340d3812d09/justno
+
+and that's it 
