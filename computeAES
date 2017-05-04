@@ -1,0 +1,28 @@
+You found this clue laying around. Can you decrypt it?
+
+ HINTS
+Try online tools or python
+
+
+The text is shown in new tab :
+
+Encrypted with AES in ECB mode. All values base64 encoded
+ciphertext = R9TacKHy6cf1AZho/nwWWYaNzP5GfltKE5yW+kwRYe0LY+PdGk1hfoanS/iVZ7z1
+key = azdvtH4bvfdS/mryKLTNqQ==
+
+:
+
+Solution is  we do write a python code such as :
+
+import base64
+from Crypto.Cipher import AES
+
+key = base64.b64decode("put the key here")
+ciphertext = base64.b64decode("and text here")
+crypter = AES.new(key, AES.MODE_ECB)
+plaintext = crypter.decrypt(ciphertext).decode("utf-8")
+
+print(plaintext)
+
+work work!!
+yeap :)
