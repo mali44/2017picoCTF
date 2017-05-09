@@ -1,0 +1,43 @@
+LeakedHashes
+
+Someone got hacked! Check out some service's password hashes that were leaked at hashdump.txt! Do you think they chose strong 
+passwords? We should check... The service is running at shell2017.picoctf.com:3815!
+
+ HINTS
+See if you can crack any of the login credentials and then connect to the service as one of the users. What's the chance these hashes 
+have actually already been broken by someone else? Are there websites that host those cracked hashes? Connect from 
+the shell with nc.
+
+////////////
+In hashdump.txt 
+Go through charity user.
+When you unhash the password of charity. 
+You will get "ch4sm".
+
+enter username:                                                                                   
+charity
+charity's password:ch4sm                                                                          
+welcome to shady file server. would you like to access the cat ascii art database? y/n            
+y   
+
+/////
+then you will get a lot cat model made up of ascii.
+such as ;
+     /\_/\                                                                                        
+    ( o o )                                                                                       
+  G-==_Y_==-M                                                                                     
+      `-'        
+      
+      and FLAG is 
+      
+      
+     /\__/\                                                                                       
+    /`    '\                                                                                      
+  === 0  0 ===                                                                                    
+    \  --  /    - flag is 4f36a002cc953e6567a878758abc8cf9                                        
+                                                                                                  
+   /        \                                                                                     
+  /          \                                                                                    
+ |            |                                                                                   
+  \  ||  ||  /                                                                                    
+   \_oo__oo_/#######o                   
