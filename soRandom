@@ -1,3 +1,4 @@
+Level-2 Task
 It seems to be outputting the flag but randomizing all the characters first. Is there anyway to get back the original flag? 
 We are given: sorandom.py
 
