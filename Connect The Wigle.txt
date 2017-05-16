@@ -1,0 +1,59 @@
+Connect The Wigle
+
+Identify the data contained within wigle and determine how to visualize it. Update 16:26 EST 1 Apr If you feel that you are close, make a private piazza post with what you have, and an admin will help out.
+
+ HINTS
+Perhaps they've been storing data in a database. How do we access the information?
+How can we visualize this data? Maybe we just need to take a step back to get the big picture?
+Try zero in the first word of the flag, if you think it's an O.
+If you think you're super close, make a private piazza post with what you think it is.
+
+________________
+
+1.First we check what kindda file is that. 
+
+$file wigle
+wigle: SQLite 3.x database, last written using SQLite version 3008007
+
+//then we see that is sqlite file.
+
+
+2.Lets see what in table.
+$sqlite3 wigle .table
+android_metadata  location          network 
+
+3.I also checked whats in the database. So We will see there is longtitude and latitute.. 
+There what we need is. !
+
+4. We will seperate these parameters from database. And use it for visualize
+
+
+sqlite3 wigle.sqlite "select lat,lon from location;" | awk -F'|' 'BEGIN{OFS=",";} {print $1,$2}'
+
+23.0,-107.96
+23.01,-107.96
+23.02,-107.96
+23.02,-107.955
+23.02,-107.95
+23.03,-107.96
+23.04,-107.96
+23.04,-107.95
+23.04,-107.94
+23.0,-107.86
+23.01,-107.86
+23.02,-107.86
+23.03,-107.86
+23.04,-107.86
+23.05,-107.86
+23.0,-107.84
+23.0,-107.85
+23.01,-107.76
+23.0,-107.76
+23.0,-107.74
+	.
+	.
+	.
+	.
+Those datas up there seperated. Now time to use in visualizer..
+http://www.hamstermap.com/quickmap.php
+Take your key :) 
